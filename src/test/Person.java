@@ -5,6 +5,7 @@ public class Person {
     public int age;
 
     public Person() {
+        System.out.println("123");
     }
 
     private Person(String name){

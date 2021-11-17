@@ -48,4 +48,29 @@ public class ReflectionTest {
         System.out.println(person);
         System.out.println(str);
     }
+
+    @Test
+    public void test3() throws ClassNotFoundException {
+        Class clazz1 = Person.class;
+        System.out.println(clazz1);
+
+        Person person1 = new Person();
+        Class clazz2 = person1.getClass();
+        System.out.println(clazz2);
+
+        Class clazz3 = Class.forName("test.Person");
+        System.out.println(clazz3);
+
+        System.out.println(clazz1 == clazz2);
+        System.out.println(clazz2 == clazz3);
+
+        ClassLoader classLoader = ReflectionTest.class.getClassLoader();
+        Class clazz4 = classLoader.loadClass("test.Person");
+        System.out.println(clazz4);
+    }
+
+    @Test
+    public void test4(){
+
+    }
 }
