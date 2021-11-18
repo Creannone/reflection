@@ -1,5 +1,3 @@
-package test;
-
 public class Person {
     private String name;
     public int age;

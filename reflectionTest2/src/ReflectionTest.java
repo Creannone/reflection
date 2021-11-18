@@ -1,4 +1,4 @@
-package test;
+
 
 import org.junit.Test;
 
@@ -58,14 +58,14 @@ public class ReflectionTest {
         Class clazz2 = person1.getClass();
         System.out.println(clazz2);
 
-        Class clazz3 = Class.forName("test.Person");
+        Class clazz3 = Class.forName("Person");
         System.out.println(clazz3);
 
         System.out.println(clazz1 == clazz2);
         System.out.println(clazz2 == clazz3);
 
         ClassLoader classLoader = ReflectionTest.class.getClassLoader();
-        Class clazz4 = classLoader.loadClass("test.Person");
+        Class clazz4 = classLoader.loadClass("Person");
         System.out.println(clazz4);
     }
 
@@ -73,4 +73,5 @@ public class ReflectionTest {
     public void test4(){
 
     }
+
 }
